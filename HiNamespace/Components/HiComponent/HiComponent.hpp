@@ -25,6 +25,7 @@ class HiComponent final : public HiComponentComponentBase {
     ~HiComponent();
 
   private:
+
     // ----------------------------------------------------------------------
     // Handler implementations for commands
     // ----------------------------------------------------------------------
@@ -36,6 +37,7 @@ class HiComponent final : public HiComponentComponentBase {
                            U32 cmdSeq,                       //!< The command sequence number
                            const Fw::CmdStringArg& greeting  //!< Greeting to repeat in the SayHiEvent event
                            ) override;
+    U32 m_greetingCount = 0;
 };
 
 }  // namespace HiNamespace
